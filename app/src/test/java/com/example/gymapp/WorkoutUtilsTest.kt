@@ -1,6 +1,7 @@
 package com.example.gymapp
 
-import org.junit.Assertimport org.junit.Test
+import org.junit.Assert
+import org.junit.Test
 
 class WorkoutUtilsTest {
 

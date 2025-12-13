@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">gymApp</string>
+    <string name="app_name">FitTimer</string>
+    <string name="log_set">Log Set</string>
+    <string name="exercise_label">Exercise (e.g. Squat)</string>
+    <string name="weight_label">Weight</string>
+    <string name="reps_label">Reps</string>
+    <string name="rest_timer_title">Rest Timer</string>
+    <string name="skip_rest">Skip Rest</string>
 </resources>

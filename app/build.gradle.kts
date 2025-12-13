@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myproject"
+    namespace = "com.example.gymapp"
     compileSdk {
         version = release(36)
     }
@@ -64,14 +64,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.activity:activity-compose:1.8.2")
 
-//    val room_version = "2.6.1"
-//    val nav_version = "2.7.7"
-//
-//    // Room Database
-//    implementation("androidx.room:room-runtime:$room_version")
-//    implementation("androidx.room:room-ktx:$room_version") // For coroutines
-//    kapt("androidx.room:room-compiler:$room_version")
-////    ksp("androidx.room:room-compiler:$room_version")
 
     // Jetpack Compose
     implementation(platform("androidx.compose:compose-bom:2024.02.00"))
@@ -94,10 +86,10 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:1.6.0")
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
-    implementation("androidx.room:room-ktx:$room_version") // For Coroutines
-    kapt("androidx.room:room-compiler:$room_version") // Kotlin Annotation Processing
+    implementation("androidx.room:room-ktx:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
 
-    // Testing (Lab 7)
+    // Testing
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.mockito:mockito-core:5.8.0")
 
