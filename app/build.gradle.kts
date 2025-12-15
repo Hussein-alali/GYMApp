@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.myproject"
+        applicationId = "com.example.gymapp"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.ui.test.junit4)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -58,45 +59,42 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-    implementation(platform("androidx.compose:compose-bom:2023.08.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation(platform(libs.androidx.compose.bom.v20230800))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.activity.compose.v182)
 
 
     // Jetpack Compose
-    implementation(platform("androidx.compose:compose-bom:2024.02.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.material3:material3")
+    implementation(platform(libs.compose.bom.v20240200))
+    implementation(libs.ui)
+    implementation(libs.material3)
 
     // ViewModels
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // Testing
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.mockito:mockito-core:5.11.0")
-    testImplementation("org.mockito:mockito-inline:5.2.0")
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
 
     // UI Testing (The "Espresso" for Compose)
-    androidTestImplementation(platform("androidx.compose:compose-bom:2024.02.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    androidTestImplementation(platform(libs.compose.bom.v20240200))
+    androidTestImplementation(libs.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("androidx.compose.material:material-icons-extended:1.6.0")
+    implementation(libs.androidx.compose.material.icons.extended)
     val room_version = "2.6.1"
-    implementation("androidx.room:room-runtime:$room_version")
-    implementation("androidx.room:room-ktx:$room_version")
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
     kapt("androidx.room:room-compiler:$room_version")
 
-    // Testing
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.mockito:mockito-core:5.8.0")
 
     // Test Implementation for UI Tests (AndroidTest)
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.0")
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4.v160)
 
     // Manifest for UI Test (Required for creating the activity)
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.6.0")
+    debugImplementation(libs.ui.test.manifest)
 
 }
